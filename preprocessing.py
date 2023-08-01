@@ -5,6 +5,8 @@ import numpy as np
 from google.colab.patches import cv2_imshow
 import matplotlib.pyplot as plt
 import glob
+from PIL import ImageDraw, Image 
+
 i = 0
 images_crop_expert=[]
 path =sorted(glob.glob("/content/drive/My Drive/*.gif"))
@@ -27,13 +29,6 @@ for i in range(len(images_crop_expert)):
 
 #*********************Crop and resize**********************
 
-import cv2
-import numpy as np
-from google.colab.patches import cv2_imshow
-import matplotlib.pyplot as plt
-from PIL import ImageDraw
-import glob
-from PIL import Image 
 
 images_crop_expert=[]
 
@@ -67,8 +62,6 @@ for i in range(len(images_crop_expert)):
    d+=1
 
 #************************Skull stripping*******************
-
-import glob
 
 def ShowImage(title,img,ctype):
   plt.figure(figsize=(10, 10))
@@ -113,9 +106,6 @@ for i in range (len(p2)):
 ShowImage('SKULL',im_p[4],'rgb')
 
 ***********************************************************************
-import numpy as np
-from PIL import Image
-import cv2
 
 def my_PreProc(data):
     assert(len(data.shape)==4)
